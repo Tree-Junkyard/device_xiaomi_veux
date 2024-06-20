@@ -1,18 +1,9 @@
-export USE_CCACHE=1
-export CCACHE_COMPRESS=1
-export CCACHE_DIR=~/ccache
-export CCACHE_MAXSIZE=50G
-
-echo "Cloning required stuffs..."
-
-echo "Cloning kernel..."
+rm -rf kernel/xiaomi
 git clone https://github.com/aswinop/kernel_xiaomi_sm6375.git kernel/xiaomi/sm6375 --depth=1
 
-echo "Cloning Vendor..."
+rm -rf vendor/xiaomi
 git clone https://gitlab.com/aswinop/vendor_xiaomi_veux vendor/xiaomi/veux
-
-echo "Cloning hardware related stuff..."
-git clone https://github.com/Evolution-X/hardware_xiaomi hardware/xiaomi
-
-echo "Cloning Gcam stuff..."
 git clone https://github.com/AswinOP/vendor_xiaomi_veux-gcam vendor/xiaomi/veux-gcam
+
+rm -rf hardware/xiaomi
+git clone https://github.com/Evolution-X/hardware_xiaomi hardware/xiaomi
