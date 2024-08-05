@@ -137,6 +137,8 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libpiex_shim
 
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
